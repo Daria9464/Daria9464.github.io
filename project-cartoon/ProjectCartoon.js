@@ -26,9 +26,9 @@ function drawStar(cxt, r,R ,x,y,rota){
     cxt.closePath();
 
     
-    cxt.fillStyle="bf1";
+    cxt.fillStyle="#fd5";
     cxt.strokeStyle="#fd5";
-    cxt.lineWidth=3;
+    cxt.lineWidth=2;
     cxt.lineJoin="round";
     cxt.fill();
     cxt.stroke();
