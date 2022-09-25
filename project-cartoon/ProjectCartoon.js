@@ -6,7 +6,7 @@ window.onload= function(){
 
     //stars
     for(var i=0 ;i<200;i++){
-        var R = Math.random()*10+10;
+        var R = Math.random()*10;
         var x = Math.random()*canvas.width;
         var y = Math.random()*canvas.height;
         var r = Math.random()*360;
