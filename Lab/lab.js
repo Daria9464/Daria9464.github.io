@@ -1,4 +1,3 @@
-<script>
 var myCanvas = document.getElementById("myCanvas");
 myCanvas.width = 600;
 myCanvas.height = 300;
@@ -96,4 +95,3 @@ var myBarchart = new Barchart(
     }
 );
 myBarchart.draw();
-</script>
