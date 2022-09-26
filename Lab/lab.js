@@ -1,4 +1,4 @@
-<script>
+
 var myCanvas = document.getElementById("myCanvas");
 myCanvas.width = 600;
 myCanvas.height = 300;
@@ -78,10 +78,8 @@ var Barchart = function(options){
                 this.names[barIndex],
                 this.datas[barIndex]
             );
-
             barIndex++;
         }
-  
     }
 }
 
@@ -96,4 +94,4 @@ var myBarchart = new Barchart(
     }
 );
 myBarchart.draw();
-</script>
+
