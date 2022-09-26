@@ -1,7 +1,3 @@
-<<<<<<< HEAD:Labs/lab.js
-=======
-
->>>>>>> 8fce3db12e915a2552b418dd999166d04b8bd9b0:Lab/lab.js
 var myCanvas = document.getElementById("myCanvas");
 myCanvas.width = 600;
 myCanvas.height = 300;
@@ -96,7 +92,3 @@ var myBarchart = new Barchart(
     }
 );
 myBarchart.draw();
-<<<<<<< HEAD:Labs/lab.js
-=======
-
->>>>>>> 8fce3db12e915a2552b418dd999166d04b8bd9b0:Lab/lab.js
