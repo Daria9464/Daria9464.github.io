@@ -63,6 +63,7 @@ cxt.fillStyle ="green";
 cxt.fill(); 
 
 //draw a house
+cxt.save();
 ctx.fillStyle = "Grey";
 ctx.strokeStyle ="black";
 ctx.fillRect(665, 330,10, 45);
