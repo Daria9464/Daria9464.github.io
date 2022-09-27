@@ -29,6 +29,7 @@ function drawStar(cxt, r,R ,x,y,rota){
     cxt.lineWidth=3;
     cxt.lineJoin="round";
     cxt.fill();
+    cxt.stroke();
     cxt.restore();
 //draw moon
 drawMoon(cxt,600,100,40,3,30,'#FFF68F');
@@ -58,6 +59,5 @@ cxt.lineTo(800,600);
 cxt.lineTo(0,800);
 cxt.closePath();
 cxt.fillStyle ="green";
-cxt.fill();
-cxt.stroke();   
+cxt.fill(); 
 }
