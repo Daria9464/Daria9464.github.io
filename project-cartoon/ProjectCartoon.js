@@ -31,9 +31,9 @@ function drawStar(cxt, r,R ,x,y,rota){
     cxt.fill();
     cxt.stroke();
     cxt.restore();
-//draw moon
-drawMoon(cxt,600,100,40,3,30,'#FFF68F');
     
+//draw moon
+drawMoon(cxt,600,100,40,3,30,'#FFF68F');    
 function drawMoon(cxt,x,y,r,d,rot,fillColor){
      cxt.save();
      cxt.translate(x,y);
@@ -49,7 +49,8 @@ function moonPath(cxt,d){
      cxt.arc(0,0,1,0.5*Math.PI,1.5*Math.PI,true);
      cxt.moveTo(0,-1);
      cxt.arcTo(d,0,0,1,Math.sqrt(1+d*d)/d);
- }    
+ }   
+    
 //draw ground
 cxt.save();
 cxt.beginPath();
