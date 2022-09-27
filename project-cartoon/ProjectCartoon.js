@@ -62,14 +62,14 @@ cxt.closePath();
 cxt.fillStyle ="green";
 cxt.fill(); 
 
-//draw a house
+//draw a chimney of the house
 cxt.save();
 ctx.fillStyle = "Grey";
 ctx.strokeStyle ="black";
 ctx.fillRect(665, 330,10, 45);
 ctx.strokeRect(665, 330,10, 45);
 
-//draw a chimney of the house
+//draw a house
 ctx.fillStyle = "CornflowerBlue";
 ctx.strokeStyle ="black";
 ctx.fillRect(600, 400,100, 100);
