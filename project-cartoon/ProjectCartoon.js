@@ -1,21 +1,20 @@
 window.onload= function(){
     var canvas = document.getElementById("canvas");
     canvas.width=800;
-    canvas.height=800;
+    canvas.height=600;
     var context = canvas.getContext("2d");
 
-    //stars
+    //draw stars 
     for(var i=0 ;i<200;i++){
-        var R = Math.random()*10+10;
+        var R = Math.random()*10;
         var x = Math.random()*canvas.width;
-        var y = Math.random()*canvas.height;
+        var y = Math.random()*400;
         var r = Math.random()*360;
         drawStar(context,R/2,R,x,y,r);
     }
 }
 function drawStar(cxt, r,R ,x,y,rota){
     cxt.beginPath();
- 
     for(var i =0 ;i<5 ;i++){
         cxt.lineTo(Math.cos((18+i*72-rota)/180*Math.PI)*R+x
         ,-Math.sin((18+i*72-rota)/180*Math.PI)*R+y);
@@ -23,13 +22,44 @@ function drawStar(cxt, r,R ,x,y,rota){
         cxt.lineTo(Math.cos((54+i*72-rota)/180*Math.PI)*r+x
         ,-Math.sin((54+i*72-rota)/180*Math.PI)*r+y);
     }
-    cxt.closePath();
-
+    cxt.closePath(); 
     
-    cxt.fillStyle="#fd5";
-    cxt.strokeStyle="#fd5";
+    cxt.fillStyle="yellow";
+    cxt.strokeStyle="yellow";
     cxt.lineWidth=3;
     cxt.lineJoin="round";
     cxt.fill();
-    cxt.stroke();
+    cxt.restore();
+    
+//draw ground
+cxt.save();
+cxt.beginPath();
+cxt.moveTo(0,400);
+cxt.bezierCurveTo(200,300,500,500,800,450);
+cxt.lineTo(800,600);
+cxt.lineTo(0,800);
+cxt.closePath();
+cxt.fillStyle ="green";
+cxt.fill();
+cxt.restore();
+    
+//draw moon
+drawMoon(cxt,600,100,40,3,30,'#FFF68F');
+    
+function drawMoon(cxt,x,y,r,d,rot,fillColor){
+     cxt.save();
+     cxt.translate(x,y);
+     cxt.scale(r,r);
+     cxt.rotate(rot*Math.PI/180);
+     moonPath(cxt,d);
+     cxt.fillStyle ="yellow";
+     cxt.fill();
+     cxt.restore();
+ }
+function moonPath(cxt,d){
+     cxt.beginPath();
+     cxt.arc(0,0,1,0.5*Math.PI,1.5*Math.PI,true);
+     cxt.moveTo(0,-1);
+     cxt.arcTo(d,0,0,1,Math.sqrt(1+d*d)/d);
+ }
 }
