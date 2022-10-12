@@ -1,1 +1,1 @@
-# Heading1 CISC 3610
+# CISC 3610
