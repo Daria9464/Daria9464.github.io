@@ -1,5 +1,4 @@
 window.onload = function(){
-<<<<<<< HEAD
     var cvs = document.getElementById('canvas');
     var cxt = cvs.getContext('2d');
     var R;
@@ -94,7 +93,7 @@ function starPath(cxt){
     }
     cxt.closePath();
 }
-=======
+
      var cvs = document.getElementById('canvas');
      var cxt = cvs.getContext('2d');
      var R;
@@ -189,4 +188,3 @@ function starPath(cxt){
      }
      cxt.closePath();
  }
->>>>>>> 92f5647523533fb68b5ab08d9b681ce7cd8907a3
