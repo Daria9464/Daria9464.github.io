@@ -26,8 +26,6 @@ window.onload = function(){
      cxt.fill();
      cxt.restore(); 
      
-
-<<<<<<< HEAD
     //draw stars 
     for(var i=0 ;i<200;i++){
         var R = Math.random()*10;
@@ -59,7 +57,6 @@ function drawStar(cxt, r,R ,x,y,rota){
 drawMoon(cxt,600,100,40,3,30,'#FFF68F');
     
 function drawMoon(cxt,x,y,r,d,rot,fillColor){
-=======
      //draw a house
      cxt.save();
      cxt.beginPath();
@@ -92,7 +89,6 @@ function drawMoon(cxt,x,y,r,d,rot,fillColor){
 
 //some functions use in window.onload
  function drawMoon(cxt,x,y,r,d,rot,fillColor){
->>>>>>> ba06541f4972304caa058c359f2c4dede01d8e26
      cxt.save();
      cxt.translate(x,y);
      cxt.scale(r,r);
@@ -107,7 +103,6 @@ function drawMoon(cxt,x,y,r,d,rot,fillColor){
      cxt.arc(0,0,1,0.5*Math.PI,1.5*Math.PI,true);
      cxt.moveTo(0,-1);
      cxt.arcTo(d,0,0,1,Math.sqrt(1+d*d)/d);
-<<<<<<< HEAD
  }    
 //draw ground
 cxt.save();
@@ -119,10 +114,7 @@ cxt.lineTo(0,800);
 cxt.closePath();
 cxt.fillStyle ="green";
 cxt.fill(); 
-}
-=======
- }
- 
+     
  function drawStar(cxt,x,y,R,fillColor){
      cxt.save();
      cxt.translate(x,y);
@@ -141,4 +133,3 @@ cxt.fill();
      }
      cxt.closePath();
  }
->>>>>>> ba06541f4972304caa058c359f2c4dede01d8e26
