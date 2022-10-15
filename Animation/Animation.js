@@ -1,6 +1,6 @@
 var spritesheet_girl= {
-	"frames": {
-		"spritesheet_girl.png": {
+	"frames": [
+		{
 			"frame": {
 				"x": 1,
 				"y": 1,
@@ -19,7 +19,7 @@ var spritesheet_girl= {
 				"w": 2810,
 				"h": 1024
 			}
-		}
+		]
 	},
 	"meta": {
 		"app": "http://www.codeandweb.com/texturepacker",
