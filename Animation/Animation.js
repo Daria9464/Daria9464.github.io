@@ -1,6 +1,6 @@
 var spriteSheet{
 	"frames": {
-		"girl SpriteSheet.png": {
+		"spritesheet_girl.png": {
 			"frame": {
 				"x": 1,
 				"y": 1,
