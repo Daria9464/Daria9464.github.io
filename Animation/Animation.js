@@ -1,47 +1,38 @@
-var spritesheet_girl = {
-    "frames": [
-          {
-              "frame": {
-                  "x": 1,
-                  "y": 1,
-                  "w": 567,
-                  "h": 567
-              },
-              "rotated": false,
-              "trimmed": false,
-              "spriteSourceSize": {
-                  "x": 0,
-                  "y": 0,
-                  "w": 567,
-                  "h": 567
-              },
-              "sourceSize": {
-                  "w": 567,
-                  "h": 567
-              }
-          },
-      {
-              "frame": {
-                  "x": 570,
-                  "y": 1,
-                  "w": 567,
-                  "h": 567
-              },
-              "rotated": false,
-              "trimmed": false,
-              "spriteSourceSize": {
-                  "x": 0,
-                  "y": 0,
-                  "w": 567,
-                  "h": 567
-              },
-              "sourceSize": {
-                  "w": 567,
-                  "h": 567
-              }
-          }
-      ]
-  }
+var spritesheet_girl= {
+	"frames": {
+		"spritesheet_girl.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 2810,
+				"h": 1024
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 2810,
+				"h": 1024
+			},
+			"sourceSize": {
+				"w": 2810,
+				"h": 1024
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 2812,
+			"h": 1026
+		},
+		"scale": "1"
+	}
+}
 
 var girlImage = new Image();
 girlImage.src = './spritesheet_girl.png';
