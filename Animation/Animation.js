@@ -1,14 +1,8 @@
 "use strict";
 
 // images
-//var girlImage = new Image();
-//girlImage.src = './spritesheet_girl.png';
-var girlImage = new Array();
-for(var i=0; i<4; i++){
-    girlImage[i]=new Image();
-    var str="./spritesheet_girl"+(i+1)+".png";
-    girlImage[i].src=str;
-}
+var girlImage = new Image();
+girlImage.src = './spritesheet_girl.png';
 
 var dialogBoxImage = new Image();
 dialogBoxImage.src = './dialogBox.png';
@@ -16,15 +10,55 @@ dialogBoxImage.src = './dialogBox.png';
 var weatherImage = new Image();
 weatherImage.src = './spritesheet_sunToWindy.png';
 
-window.onload = function(){
-    var cvs = document.getElementById('canvas');
-    var cxt = cvs.getContext('2d');
+var cvs = document.getElementById('canvas');
+var cxt = cvs.getContext('2d');
+
+img.onload = function () {
+	init();
+};
+const cycleLoop = [0, 1, 2, 3];
+var row = 0; 
+let currentLoopIndex = 0;
+let frameCount = 0;
+
+var timer = -2;
+
+function step() {
+	frameCount++;
+	if (frameCount < 4) {
+		window.requestAnimationFrame(step);
+		return;
+	}
+    reportWeathing_girl();
+    window.requestAnimationFrame(step);
+    callDialogBox();
 }
-var i=0;
-var timer=setInterval(function()){
-    cxt.drawImage(girlImage[i],0,0);
-    if(i<3)
-    i++;
-    else
-    i=0;
-},100);
+
+function callDialogBox() {
+	ctx.font = "22px Arial";
+    if (timer < 15) {
+        ctx.drawImage(dialogBoxImage, dialogBoxImage.width * 0.13, dialogBoxImage.height * 0.1);
+		ctx.fillText("Keep warm as the weather gets colder ");
+    }
+    timer++;
+}
+
+function reportWeathing_girl() {
+	frameCount = 0;
+	drawFrame(cycleLoop[currentLoopIndex], row);
+	currentLoopIndex++;
+	if (currentLoopIndex >= cycleLoop.length) {
+		currentLoopIndex = 0;
+		if (row == 1) {
+			row = 0;
+		}
+		else {
+			row = 1;
+		}
+	}
+
+}
+
+function init() {
+	window.requestAnimationFrame(step);
+}
