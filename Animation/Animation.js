@@ -1,8 +1,8 @@
 "use strict";
 
 // images
-let girlImage = new Image();
-girlImage.src = './spritesheet_girl.png';
+let img = new Image();
+img.src = './spritesheet_girl.png';
 
 let dialogBoxImage = new Image();
 dialogBoxImage.src = './dialogBox.png';
@@ -12,7 +12,7 @@ weatherImage.src = './spritesheet_sunToWindy.png';
 let cvs = document.getElementById('canvas');
 let cxt = cvs.getContext('2d');
 
-girlImage.onload = function () {
+img.onload = function () {
 	init();
 };
 const scale = 2;
