@@ -41,6 +41,16 @@ function drawFrame_weatherImg(frameX, frameY){
                 650, 50, weatherScaledWidth, weatherScaledHeight);
 }
 
+function drawDialogBox() {
+	 ctx.drawImage(dialogBoxImage, 500, 250, 250, 239);
+  }
+function drawText(){
+    ctx.font = "12px Century Gothic";
+      ctx.fillStyle= "black";
+      ctx.textAlign = "center";
+    ctx.fillText("Remenber to add clothes as the weather gets colder", 600, 400);
+  }
+
 function init() {
   drawFrame(0, 0);
   drawFrame(1, 0);
@@ -60,6 +70,8 @@ function step() {
   }
   frameCount = 0;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawDialogBox();
+  drawText();
   drawFrame_weatherImg(cycleLoop[currentLoopIndex], 0);
   drawFrame(cycleLoop[currentLoopIndex], 0);  
   currentLoopIndex++;
