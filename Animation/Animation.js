@@ -6,18 +6,20 @@ img.src = './spritesheet_girl.png';
 
 let dialogBoxImage = new Image();
 dialogBoxImage.src = './dialogBox.png';
+
 let weatherImage = new Image();
 weatherImage.src = './spritesheet_sunToWindy.png';
 
-let cvs = document.getElementById('canvas');
-let cxt = cvs.getContext('2d');
-
-img.onload = function () {
-	init();
+img.onload = function() {
+  init();
 };
-const scale = 2;
-const width = 16;
-const height = 18;
+
+let canvas = document.querySelector('canvas');
+let ctx = canvas.getContext('2d');
+
+const scale = 0.2;
+const width = 560;
+const height = 1024;
 const scaledWidth = scale * width;
 const scaledHeight = scale * height;
 
@@ -57,4 +59,3 @@ function step() {
 function init() {
   window.requestAnimationFrame(step);
 }
-
