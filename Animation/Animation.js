@@ -21,8 +21,18 @@ var row = 0;
 let currentLoopIndex = 0;
 let frameCount = 0;
 
+const scale = 0.7;
+const width = 498;
+const height = 334;
+const scaledWidth = scale * width;
+const scaledHeight = scale * height;
 var timer = -2;
 
+function drawFrame(frameX, frameY) {
+	ctx.drawImage(img,
+		frameX * width, frameY * height, width, height,
+		canvas.width * 1.2, canvas.height * 0.3, scaledWidth, scaledHeight);
+}
 function step() {
 	frameCount++;
 	if (frameCount < 4) {
