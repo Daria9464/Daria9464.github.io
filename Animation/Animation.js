@@ -12,7 +12,7 @@ weatherImage.src = './spritesheet_sunToWindy.png';
 let cvs = document.getElementById('canvas');
 let cxt = cvs.getContext('2d');
 
-img.onload = function () {
+girlImage.onload = function () {
 	init();
 };
 const scale = 2;
