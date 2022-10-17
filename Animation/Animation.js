@@ -29,6 +29,18 @@ function drawFrame(frameX, frameY) {
                 617.5, 400, scaledWidth, scaledHeight);
 }
 
+const weatherImgScale = 0.4;
+const weatherImgWidth = 1025;
+const weatherImgHeight = 850;
+const weatherScaledWidth = weatherImgScale * weatherImgWidth;
+const weatherScaledHeight = weatherImgScale* weatherImgHeight;
+
+function drawFrame_weatherImg(frameX, frameY){
+  ctx.drawImage(weatherImage,
+                frameX * weatherImgWidth, frameY * weatherImgHeight, weatherImgWidth, weatherImgHeight,
+                1300, 100, weatherScaledWidth, weatherScaledHeight);
+}
+
 function init() {
   drawFrame(0, 0);
   drawFrame(1, 0);
@@ -48,8 +60,10 @@ function step() {
   }
   frameCount = 0;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawFrame(cycleLoop[currentLoopIndex], 0, 0, 0);
+  drawFrame_weatherImg(cycleLoop[currentLoopIndex], 0);
+  drawFrame(cycleLoop[currentLoopIndex], 0);  
   currentLoopIndex++;
+  
   if (currentLoopIndex >= cycleLoop.length) {
     currentLoopIndex = 0;
   }
