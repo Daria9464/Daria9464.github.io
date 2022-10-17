@@ -17,7 +17,7 @@ img.onload = function() {
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d');
 
-const scale = 0.6;
+const scale = 0.5;
 const width = 565;
 const height = 1024;
 const scaledWidth = scale * width;
@@ -26,10 +26,10 @@ const scaledHeight = scale * height;
 function drawFrame(frameX, frameY) {
   ctx.drawImage(img,
                 frameX * width, frameY * height, width, height,
-                617.5, 400, scaledWidth, scaledHeight);
+                217.5, 300, scaledWidth, scaledHeight);
 }
 
-const weatherImgScale = 0.4;
+const weatherImgScale = 0.3;
 const weatherImgWidth = 1025;
 const weatherImgHeight = 850;
 const weatherScaledWidth = weatherImgScale * weatherImgWidth;
@@ -38,7 +38,7 @@ const weatherScaledHeight = weatherImgScale* weatherImgHeight;
 function drawFrame_weatherImg(frameX, frameY){
   ctx.drawImage(weatherImage,
                 frameX * weatherImgWidth, frameY * weatherImgHeight, weatherImgWidth, weatherImgHeight,
-                1300, 100, weatherScaledWidth, weatherScaledHeight);
+                650, 50, weatherScaledWidth, weatherScaledHeight);
 }
 
 function init() {
