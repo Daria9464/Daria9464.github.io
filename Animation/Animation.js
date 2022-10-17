@@ -17,32 +17,32 @@ img.onload = function() {
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d');
 
-const scale = 0.2;
-const width = 560;
+const scale = 0.6;
+const width = 565;
 const height = 1024;
 const scaledWidth = scale * width;
 const scaledHeight = scale * height;
 
-function drawFrame(frameX, frameY, canvasX, canvasY) {
+function drawFrame(frameX, frameY) {
   ctx.drawImage(img,
                 frameX * width, frameY * height, width, height,
-                canvasX, canvasY, scaledWidth, scaledHeight);
+                617.5, 400, scaledWidth, scaledHeight);
 }
 
 function init() {
-  drawFrame(0, 0, 0, 0);
-  drawFrame(1, 0, scaledWidth, 0);
-  drawFrame(0, 0, scaledWidth * 2, 0);
-  drawFrame(2, 0, scaledWidth * 3, 0);
+  drawFrame(0, 0);
+  drawFrame(1, 0);
+  drawFrame(2, 0);
+  drawFrame(3, 0);
 }
 
-const cycleLoop = [0, 1, 0, 2];
+const cycleLoop = [0, 1, 2, 3];
 let currentLoopIndex = 0;
 let frameCount = 0;
 
 function step() {
   frameCount++;
-  if (frameCount < 15) {
+  if (frameCount < 90) {
     window.requestAnimationFrame(step);
     return;
   }
