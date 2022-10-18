@@ -8,7 +8,7 @@ let dialogBoxImage = new Image();
 dialogBoxImage.src = './dialogBox.png';
 
 let weatherImage = new Image();
-weatherImage.src = './spritesheet_sunToWindy.png';
+weatherImage.src = './spritesheet_weather.png';
 
 img.onload = function() {
   init();
