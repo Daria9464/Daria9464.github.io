@@ -1,6 +1,6 @@
 "use strict";
 
-// images
+// links to images
 let img = new Image();
 img.src = './spritesheet_girl.png';
 
@@ -10,12 +10,15 @@ dialogBoxImage.src = './dialogBox.png';
 let weatherImage = new Image();
 weatherImage.src = './spritesheet_weather.png';
 
+//animation onload
 img.onload = function() {
   init();
 };
 
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d');
+
+//draw girl image
 const scale = 0.5;
 const width = 565;
 const height = 1024;
@@ -28,6 +31,7 @@ function drawFrame(frameX, frameY) {
                 217.5, 300, scaledWidth, scaledHeight);
 }
 
+//draw weather image from sunny to windy
 const weatherImgScale = 0.3;
 const weatherImgWidth = 1025;
 const weatherImgHeight = 850;
@@ -40,9 +44,11 @@ function drawWeatherImg(frameX, frameY){
                 650, 50, weatherScaledWidth, weatherScaledHeight);
 }
 
+//draw dialogbox
 function drawDialogBox() {
 	 ctx.drawImage(dialogBoxImage, 500, 350, 250, 139);
   }
+//fill text into the dialogbox
 function drawText(){
     ctx.font = "16px Times New Roman";
       ctx.fillStyle= "black";
@@ -51,6 +57,7 @@ function drawText(){
     ctx.fillText("as the weather gets colder", 640, 430);
   }
 
+//loops for repeating report weather
 function init() {
   drawFrame(0, 0);
   drawFrame(1, 0);
