@@ -35,20 +35,21 @@ const weatherImgHeight = 850;
 const weatherScaledWidth = weatherImgScale * weatherImgWidth;
 const weatherScaledHeight = weatherImgScale* weatherImgHeight;
 
-function drawFrame_weatherImg(frameX, frameY){
+function drawWeatherImg(frameX, frameY){
   ctx.drawImage(weatherImage,
                 frameX * weatherImgWidth, frameY * weatherImgHeight, weatherImgWidth, weatherImgHeight,
                 650, 50, weatherScaledWidth, weatherScaledHeight);
 }
 
 function drawDialogBox() {
-	 ctx.drawImage(dialogBoxImage, 500, 250, 250, 239);
+	 ctx.drawImage(dialogBoxImage, 500, 350, 250, 139);
   }
 function drawText(){
-    ctx.font = "12px Century Gothic";
+    ctx.font = "16px Times New Roman";
       ctx.fillStyle= "black";
       ctx.textAlign = "center";
-    ctx.fillText("Remenber to add clothes as the weather gets colder", 600, 400);
+    ctx.fillText("Remenber to add clothes", 635, 400);
+    ctx.fillText("as the weather gets colder", 640, 430);
   }
 
 function init() {
@@ -72,7 +73,7 @@ function step() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawDialogBox();
   drawText();
-  drawFrame_weatherImg(cycleLoop[currentLoopIndex], 0);
+  drawWeatherImg(cycleLoop[currentLoopIndex], 0);
   drawFrame(cycleLoop[currentLoopIndex], 0);  
   currentLoopIndex++;
   
