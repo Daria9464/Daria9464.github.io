@@ -16,7 +16,6 @@ img.onload = function() {
 
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d');
-
 const scale = 0.5;
 const width = 565;
 const height = 1024;
