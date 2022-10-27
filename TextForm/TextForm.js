@@ -1,4 +1,4 @@
-const txtOutput = document.getElementById("txtOutput");
+ const txtOutput = document.getElementById("txtOutput");
         //function for displaying name
          function textcontent(){
                 var txtName = document.getElementById("txtName");      
@@ -37,12 +37,10 @@ const txtOutput = document.getElementById("txtOutput");
                 txtOutput.style.fontFamily = element.value;
         }
         
- //function for resetting the page to their default values
-       function reset(){
-               var defaultValue= document.getElementById("default_value");
-               defaultValue.value ="";
-               defaultValue.style.backgroundColor = "white";
-               defaultValue.style.color = "black";
-               defaultValue.style.font = "12px";
-               
+        //function for resetting the page to their default values
+       function resetOutput() {
+           txtOutput.value="";
+           txtOutput.style.backgroundColor ="White";
+           txtOutput.style.fontSize="12px";
+           txtOutput.style.color="Black";
        }
