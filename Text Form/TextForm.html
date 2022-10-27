@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectCartoon</title>
+    <title>Text Form</title>
   </head>
 <body>
-
         <h1>Text Form</h1>
+       <h2><a href="https://daria9464.github.io/CISC3610DanyingChenPortfolioPage.html">My Portfolio Page</a></h2>
+           <hr />
+        <br />
+    <form>   
+       <div id="gameArea">
+        <h3>1.Enter Name</h3>
+        <label>Enter your name: </label><br>
+        <input type = "text" id = "txtName" oninput="textcontent()"><br><br><br>
+        
+        <h3>2. Select a background color </h3> 
+        <label>Click the box select a color for background:</label><br>
+        <input type="color" id="bgcolorpicker" oninput="bgclr( this )"><br><br><br>
 
-<form>
+        <h3>3. Select a text color </h3> 
+        <label>Click the box select a color for text:</label><br>
+        <input type="color" id="textcolorpicker" oninput="fontcolor()"><br><br><br>
 
-<h3>1.Enter Name</h3>
-  <label for="fname">Enter a name:</label><br>
-  <input type="text" id="name" name="name" value=""><br><br>
-  
-<h3>2. Select a background color </h3> 
-<label for="color">Click the box select a color for background:</label><br>
-<input id="colorpicker" type="color" /><br><br>
-  
-<h3>3. Select a text color </h3> 
-<label for="color">Click the box select a color for text:</label><br>
-<input id="colorpicker" type="color" /><br><br>
+        <h3>4. Set the size of the text </h3>
+       <label>Use the slider to set the size of the text:</label><br>
+       <input type="range" id="size" min="12" max="48" oninput="fontsize()"
+ /><output class="size-output" for="size"></output><br><br><br>
+ 
+       <h3>5. Select a font </h3> 
+       <label>Select a font to display the text: </label><br>
+       <input type="radio" id="Arial" name="font_type" value="Arial" oninput="fontType(this)">
+       <label>Arial</label><br>
+       <input type="radio" id="Times New Roman" name="font_type" value="Times New Roman" oninput="fontType(this)">
+      <label>Times New Roman</label><br>
+      <input type="radio" id="Brush Script MT" name="font_type" value="Brush Script MT" oninput="fontType(this)">
+      <label>Brush Script MT</label><br><br><br><br>
 
-<h3>4. Set the size of the text </h3>
-<label>Use the slider to set the size of the text:</label>
-<input
-  type="range"
-  name="price"
-  id="price"
-  min="50000"
-  max="500000"
-  step="100"
-  value="250000" />
-<output class="price-output" for="price"></output><br><br>
-  
-<h3>5. Select a font </h3> 
-  <label>Select a font to display the text: </label><br>
-  <input type="radio" id="Arial" name="fav_language" value="Arial ">
-  <label for="Arial ">Arial</label><br>
-  <input type="radio" id="Times New Roman" name="fav_language" value="Times New Roman">
-  <label for="Times New Roman">Times New Roman</label><br>
-  <input type="radio" id="Georgia" name="fav_language" value="Georgia">
-  <label for="Georgia">Georgia</label><br><br>
-
-</form> 
-
- <h2><a href="https://daria9464.github.io/CISC3610DanyingChenPortfolioPage.html">My Portfolio Page</h2>
+        <label>Output:</label>
+        <input type="text" id="txtOutput" /><br><br>
+        
+        <input type="button" value= reset id="default_value" onclick="reset()">
+          </div>
+        </form>
+     <script src="TextForm.js"></script>
 </body>
 </html>
