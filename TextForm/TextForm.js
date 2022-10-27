@@ -43,4 +43,8 @@
            txtOutput.style.backgroundColor ="White";
            txtOutput.style.fontSize="12px";
            txtOutput.style.color="Black";
+           //the slider also go back to default value 12
+           var slider_default = "12";
+           size.value=slider_default;
+           sizedisplay.textContent =size.value;
        }
