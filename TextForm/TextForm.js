@@ -39,7 +39,9 @@
         
         //function for resetting the page to their default values
        function resetOutput() {
+           var txtName = document.getElementById("txtName"); 
            txtOutput.value="";
+           txtName.value="";
            txtOutput.style.backgroundColor ="White";
            txtOutput.style.fontSize="12px";
            txtOutput.style.color="Black";
