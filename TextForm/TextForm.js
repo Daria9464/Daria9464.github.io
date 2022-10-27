@@ -38,10 +38,8 @@
         }
         
         //function for resetting the page to their default values
-       function resetOutput() {
-           var txtName = document.getElementById("txtName"); 
+       function resetOutput() { 
            txtOutput.value="";
-           txtName.value="";
            txtOutput.style.backgroundColor ="White";
            txtOutput.style.fontSize="12px";
            txtOutput.style.color="Black";
@@ -49,4 +47,7 @@
            var slider_default = "12";
            size.value=slider_default;
            sizedisplay.textContent =size.value;
+           //input  value also go back to empty
+           var txtName = document.getElementById("txtName"); 
+           txtName.value="";
        }
