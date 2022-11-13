@@ -3,14 +3,14 @@
 <head>
  <title>Audio Lab</title>
  <style>
-   #block {
+    #block {
          padding: 20px;
          margin: 30px; 
          font-size: 30px; 
          border: 2px solid gray;
          background: lightpink;
-         width: 350px; 
-         height: 80px;
+         width: 200px; 
+         height: 190px;
          }
  </style>
 </head>
@@ -41,13 +41,23 @@
 </audio>
 
 <label>🎵 Click the box to play music 🎵</label>
-<div id="block">
+<div id="block">    
 <button onclick="playAudio('christmas')" style="background: White;" type="button">🎄Christmas⛄</button>
+<button onclick="pauseAudio('christmas')" type="button">⏸</button> <br>
+
 <button onclick="playAudio('halloween')" style="background: White;" type="button">🎃Halloween🎃</button>
+<button onclick="pauseAudio('halloween')" type="button">⏸</button> <br>
+
 <button onclick="playAudio('birthday')" style="background: White;" type="button">🎂Happy Birthday🎂</button>
+<button onclick="pauseAudio('birthday')" type="button">⏸</button> <br>
+
 <button onclick="playAudio('candy')" style="background: White;" type="button">🍬Candy🍬</button> 
+<button onclick="pauseAudio('candy')" type="button">⏸</button> <br>
+
 <button onclick="playAudio('rain')" style="background: White;"type="button">🌧Rain🌧</button>
- </div>
+<button onclick="pauseAudio('rain')" type="button">⏸</button> <br>
+</div>
+
 
 <script src="AudioLab.js"></script>
 
