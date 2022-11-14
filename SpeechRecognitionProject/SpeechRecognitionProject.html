@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <title>Audio Lab</title>
+<body>
+ <h1> Danying Chen-Voice Recognition</h1>
+              <h2><a href="https://daria9464.github.io/CISC3610DanyingChenPortfolioPage.html">My Portfolio Page</a></h2>
+          <br>
+          <hr/>      
+<center>
+<canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;">
+</canvas>
+
+ <button id='speakButton' onClick="stopButton()">Speak</button>
+</center>
+<script>
+//draw a circle
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(300,300,50,0,2*Math.PI);
+ctx.fillStyle = "Black";
+ctx.fill();
+
+ function stopButton() {
+  document.getElementById("speakButton").innerHTML = "Stop";
+};
+</script> 
+</body>
+</html>
