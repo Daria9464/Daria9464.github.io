@@ -3,8 +3,7 @@
          function textcontent(){
                 var txtName = document.getElementById("txtName");      
                 var name = txtName.value;
-                txtOutput.value = name;
-                
+                txtOutput.value = name;               
         }
 
         //function for changing background color
@@ -66,5 +65,4 @@
            document.getElementById("Arial").checked = false;
            document.getElementById("Times New Roman").checked = false;
            document.getElementById("Brush Script MT").checked = false;
-       }
        }
