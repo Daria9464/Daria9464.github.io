@@ -61,4 +61,10 @@
            var slider_default = "12";
            size.value=slider_default;
            sizedisplay.textContent =size.value;
+               
+           //uncheck the radio buttons
+           document.getElementById("Arial").checked = false;
+           document.getElementById("Times New Roman").checked = false;
+           document.getElementById("Brush Script MT").checked = false;
+       }
        }
