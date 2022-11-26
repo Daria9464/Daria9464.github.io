@@ -17,19 +17,20 @@
         <source src="Audio/audioStop.wav" type="audio/mpeg">
     </audio>
 
-    <p style="text-align:left;padding-left: 10%;">
-    Click Speak button to begin speaking, and click Stop to stop speaking<br>
-    <strong>·</strong> Say <strong>"color _____"</strong> to change the color of the circle. For example "color blue" to make the circle blue.,<br>
-    <strong>·</strong> Say <strong>"size _____"</strong> to change the size number from  <strong>1-300</strong> of the circle . For example "size 50" to make the circle with a diameter of 50.<br>
-    <strong>·</strong> Say "Help" to get help.<br><br>
-    
-    <center>
+    <p>
+    Click Speak button to begin speaking, and click Stop to stop speaking
+    <ul>
+    <li>Say <strong>"color _____"</strong> to change the color of the circle. For example "color blue" to make the circle blue.</li>
+    <li>Say <strong>"size _____"</strong> to change the size number from  <strong>1-300</strong> of the circle . For example "size 50" to make the circle with a diameter of 50.</li>
+    <li>Say "Help" to get help.</li><br>
+    </ul>
+        
+<center>
     <button id="speak" onclick="speak()">Speak</button>
     <button id="stop" onclick="stop()">Stop</button>
     <br><br>
 
-    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;">
-</canvas>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas>
 </center>
 </body>
 
