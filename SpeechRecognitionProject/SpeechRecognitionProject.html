@@ -9,27 +9,27 @@
  <h1> Danying Chen-Voice Recognition</h1>
    <h2><a href="https://daria9464.github.io/CISC3610DanyingChenPortfolioPage.html">My Portfolio Page</a></h2><hr/>      
 
-    <audio id="Speak">
-        <source src="Audio/audioSpeak.wav" type="audio/mpeg">
+    <audio id="speakVoice">
+        <source src="https://github.com/Daria9464/Daria9464.github.io/blob/main/SpeechRecognitionProject/Audio/audioSpeak.wav" type="audio/wav">
     </audio>
 
-    <audio id="Stop">
-        <source src="Audio/audioStop.wav" type="audio/mpeg">
+    <audio id="stopVoice">
+        <source src="https://github.com/Daria9464/Daria9464.github.io/blob/main/SpeechRecognitionProject/Audio/audioStop.wav" type="audio/wav">
     </audio>
 
     <p>
     Click Speak button to begin speaking, and click Stop to stop speaking
     <ul>
-    <li>Say <strong>"color _____"</strong> to change the color of the circle. For example, you can say "color blue" to make the circle blue.</li>
-    <li>Say <strong>"size _____"</strong> to change the size number from  <strong>1-300</strong> of the circle . For example, you can say "size 50" to make the circle with a diameter of 50.</li>
-    <li>Say <strong>"Help"</strong> to get help.</li><br>
+    <li>Say <strong>"color _____"</strong> to change the color of the circle. For example "color blue" to make the circle blue.</li>
+    <li>Say <strong>"size _____"</strong> to change the size number from  <strong>1-300</strong> of the circle . For example "size 50" to make the circle with a diameter of 50.</li>
+    <li>Say <strong>"Help"</strong> to help you how to use it.</li><br>
     </ul>
-        
 <center>
-    <button id="speak" onclick="speak()">Speak</button>
+    <button id="speak" onclick="Speak()">Speak</button>
     <br><br>
 
-    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;"></canvas>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #000000;">
+</canvas>
 </center>
 </body>
 
