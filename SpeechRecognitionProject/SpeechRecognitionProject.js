@@ -31,13 +31,13 @@ var SizeMini = "Size too small, the minimize size is 1";
 // Changing the text of the button. When the user clicks on "Speak" button then the value changes to "Stop"
 function Speak() {
     var x = document.getElementById("speak");
-    if (x.innerHTML == "speakVoice") {
+    if (x.innerHTML == "Speak") {
         speak.play();
-        x.innerHTML = "stopVoice";
+        x.innerHTML = "Stop";
         recognition.start();
     } else {
         stop.play();
-        x.innerHTML = "speakVoice";
+        x.innerHTML = "Speak";
         recognition.stop();
     }
 }
@@ -56,7 +56,7 @@ recognition.onresult = function (event) {
         if (event.results[i].isFinal) { //if the user stop talking 
             request = event.results[i][0].transcript;
             stop.play();
-            x.innerHTML = "speakVoice";
+            x.innerHTML = "Speak";
             recognition.stop();
             Response();
         }
