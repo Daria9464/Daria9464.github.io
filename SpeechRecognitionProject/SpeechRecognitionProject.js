@@ -5,12 +5,11 @@ var speak = document.getElementById("speakVoice");
 var stop = document.getElementById("stopVoice");
 
 var request = "";
-// variable for drawing canvas
+
 var diameter = 50;
 var cirColor = "black";
 var bgColor = "white";
-// draw canvas
-drawCircle();
+
 function drawCircle() {
     ctx.beginPath();
     ctx.rect(0, 0, c.width, c.height);
@@ -24,12 +23,10 @@ function drawCircle() {
     ctx.fill();
 }
 
-
 var help = "I think I heard you said the word, help. You can say color, followed by a color, to set the circle color. Or say background, followed by a color, to set the background color. Or say size, followed of a number from 1 to 300, to set the diameter of the circle. " 
 
 var sizeMax = "Size is limit 300";
 var SizeMini = "Size too small, the minimize size is 1";
-var x = document.getElementById("speak");
 
 // Changing the text of the button. When the user clicks on "Speak" button then the value changes to "Stop"
 function Speak() {
