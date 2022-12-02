@@ -9,7 +9,7 @@ var request = "";
 var diameter = 50;
 var cirColor = "black";
 var bgColor = "white";
-
+drawCircle();
 function drawCircle() {
     ctx.beginPath();
     ctx.rect(0, 0, c.width, c.height);
