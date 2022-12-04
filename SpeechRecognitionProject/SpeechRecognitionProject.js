@@ -66,11 +66,10 @@ function Response() {
         if (!isNaN(color.match(/option/))) {
             if (key.localeCompare("color") == 0) {
                 cirColor = option;
-            }
-            var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I changed.");
+                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I changed.");
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             drawCircle();
-
+            }
         }
         else {
             var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I didn't recognize the color.");
