@@ -66,7 +66,7 @@ function Response() {
             if (key.localeCompare("color") == 0) {
                 cirColor = option;
             }
-            var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now is " + request);
+            var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now the circle is " + request);
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             drawCircle();
         }
@@ -87,7 +87,7 @@ function Response() {
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else {
-                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now is " + request);
+                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now the circle is " + request);
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
                 drawCircle();
             }
