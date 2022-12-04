@@ -36,12 +36,12 @@ function Speak() {
     }
 }
 
-
+//Creat a recognition
 var recognition = new webkitSpeechRecognition();
 recognition.continuous = false;
 recognition.interimResults = true;
 
-color = "Red Green Yellow Blue White Black Purple Pink";
+color = "Red Green Yellow Blue White Black Purple Pink lightblue lightpink";
 
 // If voice recognition catch something
 recognition.onresult = function (event) {
@@ -66,7 +66,7 @@ function Response() {
             if (key.localeCompare("color") == 0) {
                 cirColor = option;
             }
-                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now is " + request);
+            var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now is " + request);
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             drawCircle();
         }
@@ -79,11 +79,11 @@ function Response() {
         if (!isNaN(option)) {
             diameter = parseInt(option);
             if (diameter > 300) {
-                var msg = new SpeechSynthesisUtterance(sizeMax + " but you said " + diameter);
+                var msg = new SpeechSynthesisUtterance(sizeMax);
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else if (diameter < 1) {
-                var msg = new SpeechSynthesisUtterance(sizeMini + " but you said " + diameter);
+                var msg = new SpeechSynthesisUtterance(sizeMini);
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else {
