@@ -17,8 +17,7 @@ function drawCircle() {
     ctx.fill();
 }
 
-var help = "I think I heard you said the word, help. You can say color, followed by a color, to set the circle color. Or say background, followed by a color, to set the background color. Or say size, followed of a number from 1 to 300, to set the diameter of the circle. " 
-
+var help = "I think I heard you said the word, help. You can say color, followed by a color, to set the circle color.  Or say size, followed of a number from 1 to 300, to set the diameter of the circle. "  
 var sizeMax = "Size is limit 300";
 var sizeMini = "Size too small, the minimize size is 1";
 
