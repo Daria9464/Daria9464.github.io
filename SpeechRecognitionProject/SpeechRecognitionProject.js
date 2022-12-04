@@ -54,7 +54,6 @@ recognition.onresult = function (event) {
             recognition.stop();
             Response();
         }
-
     }
 }
 // Voice recognition response
@@ -67,12 +66,12 @@ function Response() {
             if (key.localeCompare("color") == 0) {
                 cirColor = option;
             }
-                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I changed.");
+                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now is " + request);
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             drawCircle();
         }
         else {
-            var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I didn't recognize the color.");
+            var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+"I heard you said " + request);
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
         }
     }
@@ -88,13 +87,13 @@ function Response() {
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else {
-                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I changed.");
+                var msg = new SpeechSynthesisUtterance("I heard you said " + request + " Now is " + request);
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
                 drawCircle();
             }
         }
         else {
-            var msg = new SpeechSynthesisUtterance("I can not change the size of circle because I didn't get a clear number");
+            var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+"I heard you said " + request);
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
         }
     }
@@ -103,7 +102,7 @@ function Response() {
         setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
     }
     else {
-        var msg = new SpeechSynthesisUtterance("Sorry. I can't match. I heard you said " + request);
+        var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+"I heard you said " + request);
         setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
 
     }
