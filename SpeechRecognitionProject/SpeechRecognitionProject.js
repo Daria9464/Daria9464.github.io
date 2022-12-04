@@ -71,7 +71,7 @@ function Response() {
             drawCircle();
         }
         else {
-            var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+"I heard you said " + request);
+            var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+" And I think I heard you said " + request);
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
         }
     }
@@ -93,7 +93,7 @@ function Response() {
             }
         }
         else {
-            var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+"I heard you said " + request);
+            var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+" And I think I heard you said" + request);
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
         }
     }
@@ -102,7 +102,7 @@ function Response() {
         setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
     }
     else {
-        var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+"I heard you said " + request);
+        var msg = new SpeechSynthesisUtterance("Sorry, I don't understand what you said."+" And I think I heard you said" + request);
         setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
 
     }
