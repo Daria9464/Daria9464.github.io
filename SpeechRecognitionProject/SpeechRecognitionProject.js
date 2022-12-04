@@ -20,7 +20,7 @@ function drawCircle() {
 var help = "I think I heard you said the word, help. You can say color, followed by a color, to set the circle color. Or say background, followed by a color, to set the background color. Or say size, followed of a number from 1 to 300, to set the diameter of the circle. " 
 
 var sizeMax = "Size is limit 300";
-var SizeMini = "Size too small, the minimize size is 1";
+var sizeMini = "Size too small, the minimize size is 1";
 
 // Changing the text of the button. When the user clicks on "Speak" button then the value changes to "Stop"
 function Speak() {
@@ -84,7 +84,7 @@ function Response() {
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else if (diameter < 1) {
-                var msg = new SpeechSynthesisUtterance(SizeMini + " but you said " + diameter);
+                var msg = new SpeechSynthesisUtterance(sizeMini + " but you said " + diameter);
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else {
