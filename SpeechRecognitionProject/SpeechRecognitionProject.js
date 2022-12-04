@@ -61,7 +61,7 @@ function Response() {
     var key = request.split(" ")[0];
     var option = request.split(" ")[1];
 
-    if (key.localeCompare("color") == 0 || key.localeCompare("background") == 0) {
+    if (key.localeCompare("color") == 0 ) {
         if (!isNaN(color.match(/option/))) {
             if (key.localeCompare("color") == 0) {
                 cirColor = option;
