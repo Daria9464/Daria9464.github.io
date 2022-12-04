@@ -66,10 +66,10 @@ function Response() {
         if (!isNaN(color.match(/option/))) {
             if (key.localeCompare("color") == 0) {
                 cirColor = option;
+            }
                 var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I changed.");
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             drawCircle();
-            }
         }
         else {
             var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I didn't recognize the color.");
@@ -80,11 +80,11 @@ function Response() {
         if (!isNaN(option)) {
             diameter = parseInt(option);
             if (diameter > 300) {
-                var msg = new SpeechSynthesisUtterance(sizeBig + " but you said " + diameter);
+                var msg = new SpeechSynthesisUtterance(sizeMax + " but you said " + diameter);
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else if (diameter < 1) {
-                var msg = new SpeechSynthesisUtterance(SizeSmall + " but you said " + diameter);
+                var msg = new SpeechSynthesisUtterance(SizeMini + " but you said " + diameter);
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else {
