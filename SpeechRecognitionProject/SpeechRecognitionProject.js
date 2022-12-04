@@ -8,14 +8,8 @@ var request = "";
 
 var diameter = 50;
 var cirColor = "black";
-var bgColor = "white";
 drawCircle();
 function drawCircle() {
-    ctx.beginPath();
-    ctx.rect(0, 0, c.width, c.height);
-    ctx.fillStyle = bgColor;
-    ctx.fill();
-
     ctx.beginPath();
     ctx.arc(c.width * 0.5, c.height * 0.5, diameter / 2, 0, 2 * Math.PI);
     ctx.stroke();
@@ -49,11 +43,11 @@ recognition.interimResults = true;
 
 color = "Red Green Yellow Blue White Black Purple Pink";
 
-// if voice recognition catch something
+// If voice recognition catch something
 recognition.onresult = function (event) {
     var x = document.getElementById("speak");
     for (var i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].isFinal) { //if the user stop talking 
+        if (event.results[i].isFinal) { //If user stop speeking
             request = event.results[i][0].transcript;
             stop.play();
             x.innerHTML = "Speak";
@@ -63,7 +57,7 @@ recognition.onresult = function (event) {
 
     }
 }
-// response to user after analysis the words
+// Voice recognition response
 function Response() {
     var key = request.split(" ")[0];
     var option = request.split(" ")[1];
@@ -72,9 +66,6 @@ function Response() {
         if (!isNaN(color.match(/option/))) {
             if (key.localeCompare("color") == 0) {
                 cirColor = option;
-            }
-            else {
-                bgColor = option;
             }
             var msg = new SpeechSynthesisUtterance("I heard you said " + request + " I changed.");
             setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
