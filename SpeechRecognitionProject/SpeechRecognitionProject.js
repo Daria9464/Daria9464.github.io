@@ -79,11 +79,11 @@ function Response() {
         if (!isNaN(option)) {
             diameter = parseInt(option);
             if (diameter > 300) {
-                var msg = new SpeechSynthesisUtterance(sizeMax);
+                var msg = new SpeechSynthesisUtterance(sizeMax + " So, I can't change");
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else if (diameter < 1) {
-                var msg = new SpeechSynthesisUtterance(sizeMini);
+                var msg = new SpeechSynthesisUtterance(sizeMini + " So, I can't change");
                 setTimeout(function () { window.speechSynthesis.speak(msg); }, 1000);
             }
             else {
