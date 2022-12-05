@@ -46,7 +46,7 @@ color = "Red Green Yellow Blue White Black Purple Pink lightblue lightpink";
 recognition.onresult = function (event) {
     var x = document.getElementById("speak");
     for (var i = event.resultIndex; i < event.results.length; ++i) {
-        if (event.results[i].isFinal) { //If user stop speeking
+        if (event.results[i].isFinal) { 
             request = event.results[i][0].transcript;
             stop.play();
             x.innerHTML = "Speak";
